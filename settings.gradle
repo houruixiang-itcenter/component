@@ -1,0 +1,1 @@
+include ':app', ':home', ':login', ':common', ':component-base', ':news', ':news'
