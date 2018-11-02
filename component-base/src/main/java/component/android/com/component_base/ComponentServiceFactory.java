@@ -4,7 +4,7 @@ import android.content.Context;
 
 import component.android.com.component_base.base.IFragmentService;
 import component.android.com.component_base.base.ILoginService;
-import component.android.com.component_base.service.DefultLginService;
+import component.android.com.component_base.service.DefultLoginService;
 
 public class ComponentServiceFactory {
 
@@ -34,7 +34,7 @@ public class ComponentServiceFactory {
 
     public ILoginService getLoginService(){
         if (loginService == null){
-            loginService = new DefultLginService();
+            loginService = new DefultLoginService();
         }
         return loginService;
     }

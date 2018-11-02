@@ -18,7 +18,7 @@ public class HomeInterceptor implements IInterceptor {
     @Override
     public void process(Postcard postcard, InterceptorCallback callback) {
         switch (postcard.getPath()){
-            case "/home/homeActivity":
+            case "/myhome/homeActivity":
                 if (ComponentServiceFactory.getInstance(context).getLoginService().getLoginStatus()){
                     callback.onContinue(postcard);
                 }else {

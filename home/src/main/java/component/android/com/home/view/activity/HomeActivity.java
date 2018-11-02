@@ -7,7 +7,7 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 
 import component.android.com.home.R;
 
-@Route(path = "/home/homeActivity")
+@Route(path = "/myhome/homeActivity")
 public class HomeActivity extends AppCompatActivity {
 
     @Override

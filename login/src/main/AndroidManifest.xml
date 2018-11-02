@@ -9,7 +9,7 @@
         android:name=".global.LoginApp"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/login_AppTheme">
         <activity android:name=".view.activty.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

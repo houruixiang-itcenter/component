@@ -6,12 +6,12 @@ if (isRunHome.toBoolean()){
 
 android {
     compileSdkVersion 28
-
+    resourcePrefix "home_"
 
 
     defaultConfig {
         if (isRunHome.toBoolean()){
-            applicationId "component.android.com.home"
+            applicationId "component.android.com.myhome"
         }
         minSdkVersion 15
         targetSdkVersion 28

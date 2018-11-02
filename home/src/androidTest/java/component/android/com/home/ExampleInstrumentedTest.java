@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("component.android.com.home", appContext.getPackageName());
+        assertEquals("component.android.com.myhome", appContext.getPackageName());
     }
 }
