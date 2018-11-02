@@ -8,8 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.alibaba.android.arouter.facade.Postcard;
+import com.alibaba.android.arouter.facade.callback.NavCallback;
 import com.alibaba.android.arouter.launcher.ARouter;
 
+import component.android.com.common.utils.LogUtils;
 import component.android.com.component.R;
 import component.android.com.component_base.ComponentServiceFactory;
 import component.android.com.component_base.base.ILoginService;
@@ -32,13 +35,30 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_nav_home).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (loginService.getLoginStatus()){
-                    //跳转home page
-                    Toast.makeText(MainActivity.this,"跳转home--success",Toast.LENGTH_SHORT).show();
-                }else {
-                    //跳转登录页面
-                    ARouter.getInstance().build("/login/loginActivity").navigation();
-                }
+                ARouter.getInstance().build("/home/homeActivity").navigation(MainActivity.this, new NavCallback() {
+                    @Override
+                    public void onArrival(Postcard postcard) {
+                        LogUtils.LogI("loginInterceptor","done");
+                    }
+
+                    @Override
+                    public void onFound(Postcard postcard) {
+                        //super.onFound(postcard);
+                        LogUtils.LogI("loginInterceptor","found");
+                    }
+
+                    @Override
+                    public void onLost(Postcard postcard) {
+                        //super.onLost(postcard);
+                        LogUtils.LogI("loginInterceptor","lost");
+                    }
+
+                    @Override
+                    public void onInterrupt(Postcard postcard) {
+                        //super.onInterrupt(postcard);
+                        LogUtils.LogI("loginInterceptor","interrupt");
+                    }
+                });
             }
         });
     }
