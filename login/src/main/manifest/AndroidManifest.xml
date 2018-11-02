@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="component.android.com.login">
 
-    <application android:theme="@style/login_AppTheme">
+    <application>
         <activity android:name=".view.activty.LoginActivity"/>
     </application>
 
