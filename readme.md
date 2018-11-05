@@ -22,3 +22,11 @@ sure  会一步步完善以下几点
 
 提交阿里巴巴  ARouter拦截器
 不同业务组件 设置ARouter然后进行拦截处理  宿主APP业务逻辑减少
+
+
+
+
+
+
+
+博客地址:https://www.jianshu.com/p/b9766b1a9c31
